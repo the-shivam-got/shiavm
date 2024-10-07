@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <style>
+        body{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            
+        }
+
+        #p1{
+            font-style: italic;
+            font-weight: bolder;
+        }
+
+        a{
+            font-style: italic;
+            text-decoration-line: none;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to About Page</h1>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p4"></p>
+    <p id="p3"></p>
+    <script>
+        let p1 = document.querySelectorAll("p") [0];
+        let p2 = document.querySelectorAll("p") [1];
+        let p4 = document.querySelectorAll("p") [2];
+        // let p3 = document.querySelector("#p3");
+        let p3 = document.querySelectorAll("p") [3];
+        let p3a;
+        let p3b;
+        p1.innerHTML = "It's an usual about page <a href='/'>site</a> and <a href='/ind'>sheet</a>.";
+        p2.innerHTML = 'For API link, press <a href="/api/posts">here</a>.';
+        p4.innerHTML = 'Practice Sheet page is <a href="/prac">2hello<a>.'
+        p3.innerText = `The server is usually on...` ;
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('/api/info')
+                .then(response => response.json())
+                .then(data => {
+                    let p3a = `Server Port: ${data.PORT}`;
+                    let p3b = `Current Date: ${new Date(data.nowDate).toLocaleString()}`;
+                    p3.innerText = `port ${p3a} and ${p3b}.`;
+                })
+                .catch(error => console.error('Error fetching server info:', error));
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,190 @@
+/* Reset some default browser styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background: linear-gradient(135deg, #6dd5ed, #2193b0);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    transition: background 1s;
+    user-select: none;
+}
+
+body.win {
+    background: linear-gradient(135deg, #a8e063, #56ab2f);
+}
+
+#di{
+    height: 5rem;
+}
+
+
+
+#pl{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+
+}
+/* Title styling */
+h1 {
+    font-size: 3em;
+    color: #ffd700;
+    padding: 0rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Container for the game */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Style for each box */
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: #ffffc7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.8rem;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    cursor: pointer;
+    user-select: none;
+    border: none;
+    border-radius: 15px;
+    transition: all 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    outline: none;
+}
+
+/* Change background color and add shadow on hover */
+.box:hover {
+    background-color: #ffffaa;
+    transform: scale(1.05) rotate(3deg);
+    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.5);
+}
+
+/* Disabled box (already clicked) */
+.box:disabled {
+    cursor: not-allowed;
+    background-color: #ffff;
+    color: #999;
+    box-shadow: none;
+    transform: scale(1);
+}
+
+.bo {
+    width: 100px;
+    height: 100px;
+    background-color: #ffffc7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.8rem;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    cursor: pointer;
+    user-select: none;
+    border: none;
+    border-radius: 15px;
+    transition: all 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    outline: none;
+}
+
+/* Change background color and add shadow on hover */
+.bo:hover {
+    background-color: #ffffaa;
+    transform: scale(1.05) rotate(3deg);
+    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.5);
+}
+
+/* Disabled box (already clicked) */
+.bo:disabled {
+    cursor: not-allowed;
+    background-color: #ffff;
+    color: #999;
+    box-shadow: none;
+    transform: scale(1);
+}
+
+/* Style for the reset button */
+#reset-btn, #new-btn, #start-btn {
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 1.2em;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    cursor: pointer;
+    background-color: #ffd700;
+    color: #2a2a2a;
+    border: none;
+    border-radius: 50px;
+    transition: all 0.3s;
+    box-shadow: 0 4px 10px rgba(255, 215, 0, 0.3);
+}
+
+/* Change background color and scale on hover for buttons */
+#reset-btn:hover, #new-btn:hover, #start-btn:hover {
+    background-color: #ffec8b;
+    transform: scale(1.1) rotate(-3deg);
+}
+
+/* Change background color when winning */
+body.win {
+    background-color: #4caf50;
+}
+
+#winn {
+    font-size: 5rem;
+    color: #ffd700;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.msg-container {
+    height: 30vmin;
+}
+
+.hide {
+    display: none;
+}
+
+#msg {
+    font-size: 2.5em;
+    color: #ffd700;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    margin-left: 0rem;
+}
+
+#ms-l {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+
+.hide2 {
+    display: none;
+}

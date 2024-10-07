@@ -1,0 +1,3 @@
+i am shivam gupta...
+the file extraction was complete.
+file path is random.txt which was access by a promise
